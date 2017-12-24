@@ -11,7 +11,7 @@ export default class App extends Component {
         this.state = { 
 
         };
-
+        console.log('waiting for data');
         http.getProducts();
     }
 
