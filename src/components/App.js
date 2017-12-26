@@ -32,16 +32,24 @@ export default class App extends Component {
     }
 
     buildList = () => {
-        let giftList = this.state.gifts.map(gift => {
-            return <Gift giftName={gift.gift}/>
+        return this.state.gifts.map(gift => {
+            return(
+                <Gift 
+                    recipient={gift.recipient}
+                    price={gift.price}
+                    giftName={gift.gift}
+                    notes={gift.notes}
+                    store={gift.store}
+                />
+            )
         });
     }
 
     render () {
         return (
             <div>
-                <h1>Hey it's the app</h1>
-                {giftList}
+                <h2>My Gift List</h2>
+                {this.buildList()}
             </div>
         );
     };
