@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import HttpService from '../services/http-service';
 import Gift from './Gift';
+import GiftList from './GiftList';
 
 const http = new HttpService();
 
@@ -17,7 +18,6 @@ export default class App extends Component {
         this.loadData();
 
         this.buildList = this.buildList.bind(this);
-        this.buildList();
     }
 
     loadData = () => {
@@ -35,6 +35,7 @@ export default class App extends Component {
         return this.state.gifts.map(gift => {
             return(
                 <Gift 
+                    key={gift._id}
                     recipient={gift.recipient}
                     price={gift.price}
                     giftName={gift.gift}
@@ -49,7 +50,13 @@ export default class App extends Component {
         return (
             <div>
                 <h2>My Gift List</h2>
-                {this.buildList()}
+                <h3>Budget: $375</h3>
+                <div className="gift-area">
+                    {this.buildList()}
+                </div>
+                <div className="list-area">
+                    <GiftList />
+                </div>
             </div>
         );
     };

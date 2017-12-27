@@ -4,3 +4,16 @@
     float: left;
     margin: 10px;
 }
+
+.gift-area {
+    min-width: 320px;
+    max-width: 60%;
+    float: left;
+}
+
+.list-area {
+    min-width: 320px;
+    max-width: 30%;
+    margin: 0 20px 10px;
+    float: right;
+}
