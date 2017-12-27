@@ -16,7 +16,7 @@ export default class Gift extends Component {
                     <p className="card-text">Price: ${this.props.price}</p>
                     <p className="card-text">Store: {this.props.store}</p>
                     <p className="card-text">Notes: {this.props.notes}</p>
-                    <a href="#" className="btn btn-primary">Add to list</a>
+                    <a href="#" className="btn btn-primary">Purchased</a>
                 </div>
             </div>
         );
