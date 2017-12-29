@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import GiftListItem from './GiftListItem';
+import NotificationService from '../services/notification-service';
 
 export default class GiftList extends Component {
     constructor(props) {
